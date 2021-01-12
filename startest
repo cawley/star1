@@ -1,0 +1,56 @@
+import java.util.Scanner;
+public class Star{  
+  public static void main(String[] args){
+   
+    Scanner a = new Scanner(System.in);
+    System.out.println("Enter a number between one and three.");
+    System.out.println("A number 1 will give a right triangle.");
+    System.out.println("A number 2 will give a left triangle.");
+    System.out.println("A number 3 will give a centered triangle.");
+    
+    int user = a.nextInt();
+    
+    System.out.println("Enter the amount of lines");
+    int n = a.nextInt();
+    
+    int i, x, z;
+    
+    switch(user)
+    {
+      case 1: for (i = 0; i <= n; i++){
+              for (x = 1; x <= i; x++){
+                  System.out.print("*");
+              }
+                  System.out.println();
+              }
+      break;
+      
+      case 2: for (i = 0; i < n; i++){
+              for (x = i; x < n; x++){
+               System.out.print(" ");
+              }
+              for (z = 0; z <= i; z++){
+               System.out.print("*");
+              }
+               System.out.println();
+              }
+      break;
+    
+      
+      case 3: for (i = 0; i < n; i++){
+               System.out.print(" ");
+              for (x = i; x < n; x++){
+               System.out.print(" ");
+              }
+              for (z = 0; z <= i; z++){
+               System.out.print("*");
+               System.out.print(" ");
+              }
+               System.out.println();
+              }
+      break;
+      default: System.out.println("Did you really think I wouldn't notice if you entered a number other than one, two or three? Please just enter 1 2 or 3.");
+    }
+    
+  }
+  }
